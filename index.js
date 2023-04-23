@@ -46,7 +46,11 @@ class Word {
   }
 
   // implement the updateScreen function:
-  updateScreen() {}
+  updateScreen() {
+    document.getElementById("remaining-guesses").textContent = this.remainingGuesses
+    document.getElementById("incorrect-letters").textContent = this.incorrectLetters
+    document.getElementById("word-to-guess").textContent = this.displayWord
+  }
 
   // implement the isGameOver function:
   isGameOver() {}
