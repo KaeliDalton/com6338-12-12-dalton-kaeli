@@ -62,7 +62,15 @@ class Word {
   }
 
   // implement the getWinOrLoss function:
-  getWinOrLoss() {}
+  getWinOrLoss() {
+    if (this.word === this.displayWord & this.remainingGuesses > 0){
+      return "win"
+    }else if (this.word !== this.displayWord & this.remainingGuesses <= 0){
+      return "loss"
+    }else{
+      return null
+    }
+  }
 }
 
 function newGame() {
