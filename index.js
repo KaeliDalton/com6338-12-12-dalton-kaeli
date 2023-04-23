@@ -26,16 +26,33 @@ class Word {
   }
 
   // implement the guessLetter function:
-  // guessLetter(letter) {}
+  guessLetter(letter) {
+    this.letter = letter
+    let wordArray = this.word.split('')
+    let displayArray = this.displayWord.split('')
+    let correct = false
+    for (var i=0; i < wordArray.length; i++){
+    if (wordArray[i] == letter){
+      correct = true
+      this.correctLetters.push(letter)
+      displayArray[i] = letter
+      this.displayWord = displayArray.join('')
+    } 
+  }
+  if (correct !== true){
+    this.remainingGuesses--
+    this.incorrectLetters.push(letter)
+  }
+  }
 
   // implement the updateScreen function:
-  // updateScreen() {}
+  updateScreen() {}
 
   // implement the isGameOver function:
-  // isGameOver() {}
+  isGameOver() {}
 
   // implement the getWinOrLoss function:
-  // getWinOrLoss() {}
+  getWinOrLoss() {}
 }
 
 function newGame() {
